@@ -1,0 +1,242 @@
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<title>My Pictures Gallery</title>
+<style>
+
+
+
+html, body {
+  height: 100%;
+  font-family: arial;
+  background: black;
+}
+
+* { color: #fff }
+
+a, p, button { font-size: 16px; }
+
+.grid>* { padding: 30px }
+
+.rg_item {
+  overflow: hidden;
+  box-shadow: 1px 1px 6px 0 black;
+
+}
+
+.rg_item-img {
+  height: auto;
+  width: 100%;
+  height: 40px;
+}
+
+.rg_item-content { padding: 10px;
+  background: white;
+}
+
+li { padding: 5px 0 }
+
+body>a, body>button {
+  display: initial;
+  border: 1px solid #fff;
+  padding: 5px 15px;
+  text-decoration: none;
+  background: none;
+  box-shadow: 1px 1px 6px 0 black;
+  position: relative;
+  color: #fff;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
+  font-weight: 700;
+  cursor: pointer
+}
+
+body>a:after, body>button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: white;
+  width: 25%;
+  height: 0;
+  transition: all 0.2s ease-in-out;
+  z-index: -1;
+  display: block
+}
+
+body>a:hover, body>button:hover { color: #000 }
+
+body>a:hover:after, body>button:hover:after {
+  width: 100%;
+  height: 100%
+}
+</style>
+</head>
+<body>
+    
+    <nav class="navbar" style="background: #555;">
+        <div class="container-fluid">
+        <ul class="nav navbar-nav" style="color: black">
+            <li class="active"><a href="index.html">Movies</a></li>
+            <li><a href="person.html">Personalities</a></li>
+        </ul>
+        <button class="rg_btn btn btn-danger navbar-btn" data-rg="grid-1">Shuffle</button>
+        </div>
+    </nav>
+<div class="container">
+
+  <div class="container">
+      
+  
+    </div>
+  
+    <div class="row">
+      <div class="col-md-8 adiv">
+        <div class="row">
+          <div class="container-fluid" style="text-align:center">
+            <div class="grid" id="grid-1">
+              <div>
+                <div class="rg_item">
+                  <div class="rg_item-img"></div>
+                  <div class="rg_item-content"><img src="images/2.jpg" alt="" width="100%" height="100%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="rg_item">
+                  <div class="rg_item-img"></div>
+                  <div class="rg_item-content"><img src="images/1.jpg" alt="" width="100%" height="100%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="rg_item">
+                  <div class="rg_item-img"></div>
+                  <div class="rg_item-content"><img src="images/3.jpg" alt="" width="100%" height="100%">&lt;</div>
+                </div>
+              </div>
+              <div>
+                <div class="rg_item">
+                  <div class="rg_item-img"></div>
+                  <div class="rg_item-content"><img src="images/4.jpg" alt="" width="100%" height="100%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="rg_item">
+                  <div class="rg_item-img"></div>
+                  <div class="rg_item-content"><img src="images/5.jpg" alt="" width="100%" height="100%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="rg_item">
+                  <div class="rg_item-img"></div>
+                  <div class="rg_item-content"><img src="images/6.jpg" alt="" width="100%" height="100%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="rg_item">
+                  <div class="rg_item-img"></div>
+                  <div class="rg_item-content"><img src="images/7.jpg" alt="" width="100%" height="100%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="rg_item">
+                  <div class="rg_item-img"></div>
+                  <div class="rg_item-content"><img src="images/8.jpg" alt="" width="100%" height="100%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="rg_item">
+                  <div class="rg_item-img"></div>
+                  <div class="rg_item-content"><img src="images/9.png" alt="" width="100%" height="100%"></div>
+                </div>
+              </div>
+              
+           
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+
+
+      
+      
+      <div class="col-md-4 bdiv">
+        <div class="row">
+          <div class="container-fluid" style="border:0px solid #0c0c0c; box-shadow:1px 1px 6px 0 black; background: black; text-align:center;padding: 5%">
+            <div class="col-md-12 justify-content-start">
+              <h3>BMI Calculator</h3>
+              <div class="container-fluid" style=" box-shadow :white; border-radius: 6px; padding: 10%; background-color: #555">
+                <form class="form" id="form" onsubmit="return validateForm()">
+                  <div class="row-one">
+                    <input type="text" class="form-control" id="age" placeholder="Age" style="" autocomplete="off" required="">
+                    </div><br>
+                  
+                  <div class="row-two">
+                    <input type="text" placeholder="Height(cm)" class="form-control" id="height" autocomplete="off" required="">
+                    <br>
+                    <input type="text" placeholder="Height(cm)" class="form-control" id="weight" autocomplete="off" required="">
+                  </div>
+                    <br>
+                    
+                    <div class="radio">
+                    <label><input type="radio" name="radio" id="f"><p class="radio-inline" style="text text-align: start">Female</p>
+                    </label>
+                    <label><input type="radio" name="radio" id="m"><p class="radio-inline" style="text-align: left">Male</p>
+                    </label>
+                    </div>
+                    
+                  <button class="btn btn-danger" id="submit" onclick="countBmi()">Submit</button>
+                  </form>
+                  <p></p>
+                  <p id="space"> Your BMI is <span id="output1"></span> </p>
+                  <p id="space"> Your are <span id="output2"></span> </p>
+              </div>
+            </div>
+          <div class="col-md-12 justify-content-end">
+              <br>
+              <br>
+            <h3>Find Out Your Zodiac Sign</h3>
+            
+            <div class="container-fluid" style="box-shadow : white; border-radius: 6px; background-color: #555"> 
+                <h2> Enter your birthday. </h2>
+                <p><input placeholder="Month" class="form-control" type="number" id="month" min="1" max="12"></p>
+                <p><input class="form-control" type="number" id="day" placeholder="Day" min="1" max="31"></p>
+                <button class="btn btn-danger" id="animated" onclick="zodiac()">Submit</button>
+                <p id="photo"></p>
+                <p id="space"> Your zodiac sign is <span id="output"></span> </p>
+                
+            </div>
+  
+          </div>  
+          </div>
+         </div>
+        </div>
+    </div>
+  </div>
+    
+      <footer class="r" style="background: #555 ">
+          <div class="container">
+          <h3>Contact US:</h3>
+          Soham De<br>
+          iamsoham1999@gmail.com<br>
+          +91 8731031910<br><br>
+          </div>
+      </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
+<script src="src/rdmgrid.min.js"></script> 
+<script>
+	// Initialize a grid
+	$('#grid-1').rdmGrid();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="myscripts.js"></script> 
+
+
+</body></html>
